@@ -1,6 +1,6 @@
 {% set name = "xwebrtc" %}
-{% set version = "0.3.0" %}
-{% set sha256 = "46b4408bd46d52f6139da7718a2b6d40d8ee3db6230e6f70fb9e7df71f272932" %}
+{% set version = "0.4.0" %}
+{% set sha256 = "36a2386cd5369df4606d53b5dfd06930bcb61d3e13e6289b54e3cfd53ef1464a" %}
 
 package:
   name: {{ name|lower }}
