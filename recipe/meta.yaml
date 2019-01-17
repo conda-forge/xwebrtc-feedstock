@@ -1,6 +1,6 @@
 {% set name = "xwebrtc" %}
-{% set version = "0.3.0" %}
-{% set sha256 = "46b4408bd46d52f6139da7718a2b6d40d8ee3db6230e6f70fb9e7df71f272932" %}
+{% set version = "0.4.0" %}
+{% set sha256 = "36a2386cd5369df4606d53b5dfd06930bcb61d3e13e6289b54e3cfd53ef1464a" %}
 
 package:
   name: {{ name|lower }}
@@ -12,8 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1000
-  {% if 'toolchain' in compiler('cxx') %}skip: True{% endif %}  # Only build with modern compilers.
+  number: 0
   skip: true  # [win and vc<14]
 
 requirements:
@@ -21,10 +20,10 @@ requirements:
     - {{ compiler('cxx') }}
     - cmake
   host:
-    - xeus >=0.17.0,<0.18
+    - xeus >=0.18.1,<0.19
     - xtl >=0.5.0,<0.6
-    - xproperty >=0.7.0,<0.8
-    - xwidgets >=0.15.0,<0.16
+    - xproperty >=0.8.0,<0.9
+    - xwidgets >=0.16.0,<0.17
 
 test:
   commands:
