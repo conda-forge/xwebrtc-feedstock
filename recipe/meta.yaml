@@ -1,6 +1,6 @@
 {% set name = "xwebrtc" %}
-{% set version = "0.6.0" %}
-{% set sha256 = "2d4fd7e529ed573f7abf793f0857033096ae6e2c8d58fbb9bf58fff114fae9b4" %}
+{% set version = "0.6.1" %}
+{% set sha256 = "e508d21d7256a6a4e1cfe65515124fac0dc0dfa75b3858942117b56a71dfbe80" %}
 
 package:
   name: {{ name|lower }}
@@ -19,11 +19,12 @@ requirements:
   build:
     - {{ compiler('cxx') }}
     - cmake
+    - make  # [unix]
   host:
-    - xeus >=0.24.1,<25
+    - xeus >=0.24.1,<26
     - xtl >=0.6.8,<0.7
     - xproperty >=0.10.0,<0.11
-    - xwidgets >=0.23.0,<0.24
+    - xwidgets >=0.23.0,<0.25
 
 test:
   commands:
