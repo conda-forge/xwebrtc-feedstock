@@ -19,11 +19,12 @@ requirements:
   build:
     - {{ compiler('cxx') }}
     - cmake
+    - make  # [unix]
   host:
-    - xeus >=0.24.1,<25
+    - xeus >=0.24.1,<26
     - xtl >=0.6.8,<0.7
     - xproperty >=0.10.0,<0.11
-    - xwidgets >=0.23.0,<0.24
+    - xwidgets >=0.23.0,<0.25
 
 test:
   commands:
